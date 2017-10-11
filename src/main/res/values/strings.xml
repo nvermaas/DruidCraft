@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">New Spread</string>
+    <string name="title_notifications">Info</string>
     <string name="app_name">DruidCraft Tarot</string>
     <string name="welcome"><b>Choose a Spread</b></string>
     <string name="exit">Exit</string>

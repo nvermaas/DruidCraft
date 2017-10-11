@@ -181,7 +181,7 @@ public class CircleSpreadActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
       switch (item.getItemId()) {
         case R.id.navigation_home:
-          doPreviousLayout();
+          finish();
           return true;
         case R.id.navigation_dashboard:
           // new spread
