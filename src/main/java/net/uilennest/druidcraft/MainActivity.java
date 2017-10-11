@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     static final int DIALOG_MEANING = 0;
     static final int MAX_CARDS = 78;
     static final int MAX_CARDS_GREAT_ARCANA = 22;
+    private TypedArray hiddencards;
     private TypedArray cards;
     private String currentMeaning;
     private TypedArray meanings;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     public void doChangeCard(View view) {
         Integer card_id = Common.pickCard(Integer.valueOf(MAX_CARDS));
         Drawable card = this.cards.getDrawable(card_id);
+
         String meaning = this.meanings.getString(card_id);
 
         this.currentMeaning = meaning;
@@ -125,13 +127,19 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onBackPressed();
     }
+//=== Interface to the other Activities ========================
+    public void doCircleSpread(View paramView)
+    {
+        startActivity(new Intent(this, CircleSpreadActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle myBundle) {
         super.onCreate(myBundle);
         setContentView(R.layout.activity_main);
-        //setContentView(R.layout.ff);
+
         this.cards = getResources().obtainTypedArray(R.array.cards);
+        this.hiddencards = getResources().obtainTypedArray(R.array.hiddencards);
         this.meanings = getResources().obtainTypedArray(R.array.meanings);
         this.currentMeaning = this.meanings.getString(0);
         this.vibrator = ((Vibrator)getSystemService(Context.VIBRATOR_SERVICE));

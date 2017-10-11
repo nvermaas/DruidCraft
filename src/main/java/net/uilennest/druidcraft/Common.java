@@ -17,7 +17,7 @@ public class Common {
   public static Integer pickCard(Integer max)  {
     return Integer.valueOf(new Random().nextInt(max));
   }
-  
+
   public static List<Integer> pickCards(Integer numberOfCards, Integer max)  {
     ArrayList cards = new ArrayList();
     Random random = new Random();

@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:label="@string/cardview" android:name=".CardViewActivity"/>
+        <activity android:label="@string/circlespread" android:name=".CircleSpreadActivity"/>
     </application>
 
 </manifest>
