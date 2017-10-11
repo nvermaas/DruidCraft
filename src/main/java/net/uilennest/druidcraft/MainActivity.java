@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -33,7 +34,11 @@ public class MainActivity extends AppCompatActivity {
     private void showBottomMessage(String message) {
         bottomTextMessage.setText(message);
     }
+    private void doPreviousLayout() {
+        switchToLayout1();
+    }
 
+    // main screen
     private void switchToLayout1() {
         LinearLayout layout1 = (LinearLayout)findViewById(R.id.layout1);
         LinearLayout layout2 = (LinearLayout)findViewById(R.id.layout2);
@@ -50,20 +55,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // === functions called from the GUI elements (views) =========================
-    public void doChangeCard(View paramView) {
-        showTopMessage("change main card");
-
+    public void doChangeCard(View view) {
         Integer card_id = Common.pickCard(Integer.valueOf(MAX_CARDS));
         Drawable card = this.cards.getDrawable(card_id);
         String meaning = this.meanings.getString(card_id);
+
         this.currentMeaning = meaning;
         ((ImageView)findViewById(R.id.mainCard)).setImageDrawable(card);
+        //showTopMessage(meaning);
     }
 
-    public void doSingleCard(View paramView)
-    {
-        showTopMessage("do single card");
-
+    public void doSingleCard(View view) {
         Integer card_id = Common.pickCard(Integer.valueOf(MAX_CARDS));
         Drawable card = this.cards.getDrawable(card_id);
         String meaning = this.meanings.getString(card_id);
@@ -76,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
         switchToLayout2();
         ((ImageView)findViewById(R.id.mainCard)).setImageDrawable(card);
         ((ImageView)findViewById(R.id.card)).setImageDrawable(card);
+    }
+
+    public void doShowMeaning(View view) {
+        Common.showDialog(MainActivity.this,this.currentMeaning);
+        //showTopMessage(this.currentMeaning);
     }
 
     public void startCardViewActivity()
@@ -110,10 +117,6 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
-    // 2131165185 = R.id.layout1
-    // 2131165187 = R.id.layout2
-    // 2131165188  = R.id.card
-
     // catch the back pressed to switch to main layout
     public void onBackPressed() {
         if (((LinearLayout)findViewById(R.id.layout2)).getVisibility() == View.VISIBLE) {
@@ -139,21 +142,39 @@ public class MainActivity extends AppCompatActivity {
         bottomTextMessage = (TextView) findViewById(R.id.docs);
 
         // create listeners
-        // mainCard
+        // for mainCard on layout1 screen
         findViewById(R.id.mainCard).setOnClickListener(new View.OnClickListener()
         {
-            public void onClick(View paramAnonymousView)
+            public void onClick(View view)
             {
-                MainActivity.this.doChangeCard(paramAnonymousView);
+                doChangeCard(view);
             }
         });
 
         findViewById(R.id.mainCard).setOnLongClickListener(new View.OnLongClickListener()
         {
-            public boolean onLongClick(View paramAnonymousView)
+            public boolean onLongClick(View view)
             {
-                //MainActivity.this.doShowMeaning(paramAnonymousView);
-                MainActivity.this.vibrator.vibrate(50L);
+                doShowMeaning(view);
+                return false;
+            }
+        });
+
+        // for card on layout2 screen
+        findViewById(R.id.card).setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                doPreviousLayout();
+            }
+        });
+
+        findViewById(R.id.card).setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View view)
+            {
+                doShowMeaning(view);
+                //vibrator.vibrate(50L);
                 return false;
             }
         });
