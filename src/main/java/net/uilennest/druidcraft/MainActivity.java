@@ -1,6 +1,8 @@
 package net.uilennest.druidcraft;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +10,14 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    static final int DIALOG_ABOUT = 1;
+    static final int DIALOG_MEANING = 0;
+    static final int MAX_CARDS = 78;
+    static final int MAX_CARDS_GREAT_ARCANA = 22;
+    private TypedArray cards;
+    private String currentMeaning;
+    private TypedArray meanings;
+    private Vibrator vibrator;
 
     private TextView mTextMessage;
 
@@ -33,10 +43,14 @@ public class MainActivity extends AppCompatActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle myBundle) {
+        super.onCreate(myBundle);
         setContentView(R.layout.activity_main);
-
+        this.cards = getResources().obtainTypedArray(R.array.cards);
+        this.meanings = getResources().obtainTypedArray(R.array.meanings);
+        this.currentMeaning = this.meanings.getString(0);
+        // this.vibrator = ((Vibrator)getSystemService("vibrator"));
+        //setContentView(R.layout.main);
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
