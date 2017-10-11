@@ -6,6 +6,9 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnLongClickListener;
 import android.widget.ImageView;
@@ -120,11 +123,11 @@ public class CircleSpreadActivity
     layout2.setVisibility(View.VISIBLE);
   }
 
-  public void doInfo(View paramView) {
+  public void doInfo() {
     doShowCard(this.hiddencards.getDrawable(Integer.valueOf(info_circlespead)));
   }
 
-  public void doNewSpread(View paramView) {
+  public void doNewSpread() {
     this.picks = Common.pickCards(NR_PICKS, MAX_CARDS);
     hideSpread();
   }
@@ -171,6 +174,29 @@ public class CircleSpreadActivity
     this.tribeHidden = showCardOnPosition(2, R.id.positionTribe, this.tribeHidden);
   }
 
+  private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+          = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+      switch (item.getItemId()) {
+        case R.id.navigation_home:
+          doPreviousLayout();
+          return true;
+        case R.id.navigation_dashboard:
+          // new spread
+          doNewSpread();
+
+          return true;
+        case R.id.navigation_notifications:
+          doInfo();
+          return true;
+      }
+      return false;
+
+    }
+
+  };
   // catch the back pressed to switch to main layout
   public void onBackPressed() {
     if (((LinearLayout) findViewById(R.id.layout2)).getVisibility() == View.VISIBLE) {
@@ -302,6 +328,9 @@ public class CircleSpreadActivity
         return false;
       }
     });
+
+    BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+    navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
     // start with a hidden spread
     hideSpread();
