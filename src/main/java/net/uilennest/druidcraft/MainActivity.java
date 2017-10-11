@@ -76,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
         doShowCard(card, meaning);
     }
 
+    public void doSingleCard() {
+        Integer card_id = Common.pickCard(Integer.valueOf(MAX_CARDS));
+        Drawable card = this.cards.getDrawable(card_id);
+        String meaning = this.meanings.getString(card_id);
+        this.currentMeaning = meaning;
+
+        doShowCard(card, meaning);
+    }
+
     public void doShowCard(Drawable card, String meaning) {
         switchToLayout2();
         ((ImageView)findViewById(R.id.mainCard)).setImageDrawable(card);
@@ -101,16 +110,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    showTopMessage("Home");
+                case R.id.navigation_single:
+                    //showTopMessage("Home");
                     // showSingleCard
+                    doSingleCard(null);
 
                     return true;
-                case R.id.navigation_dashboard:
-                    showTopMessage("Spread");
+                case R.id.navigation_spread:
+                    doCircleSpread(null);
+                    //showTopMessage("Spread");
                     return true;
-                case R.id.navigation_notifications:
-                    showTopMessage("Notify");
+                case R.id.navigation_time:
+                    doCircleSpread(null);
+                    //showTopMessage("Notify");
                     return true;
             }
             return false;
@@ -128,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 //=== Interface to the other Activities ========================
-    public void doCircleSpread(View paramView)
+    public void doCircleSpread(View view)
     {
         startActivity(new Intent(this, CircleSpreadActivity.class));
     }

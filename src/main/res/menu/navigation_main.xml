@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_single"
+        android:icon="@drawable/ic_book_black_24dp"
+        android:title="Single Card" />
+
+    <item
+        android:id="@+id/navigation_spread"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Circle Spread" />
+
+    <item
+        android:id="@+id/navigation_time"
+        android:icon="@drawable/ic_view_week_black_24dp"
+        android:title="Time Spread" />
+
+</menu>
