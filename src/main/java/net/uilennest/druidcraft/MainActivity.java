@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.content.Context;
 
 public class MainActivity extends AppCompatActivity {
     static final int DIALOG_ABOUT = 1;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private String currentMeaning;
     private TypedArray meanings;
     private Vibrator vibrator;
+
 
     // main gui
     private void showTopMessage(String message) {
@@ -36,19 +38,19 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout1 = (LinearLayout)findViewById(R.id.layout1);
         LinearLayout layout2 = (LinearLayout)findViewById(R.id.layout2);
         layout1.setVisibility(View.VISIBLE);
-        layout2.setVisibility(View.INVISIBLE);
+        layout2.setVisibility(View.GONE);
     }
 
     // card gui
     private void switchToLayout2() {
     LinearLayout layout1 = (LinearLayout)findViewById(R.id.layout1);
     LinearLayout layout2 = (LinearLayout)findViewById(R.id.layout2);
-        layout1.setVisibility(View.INVISIBLE);
+        layout1.setVisibility(View.GONE);
         layout2.setVisibility(View.VISIBLE);
     }
 
     // === functions called from the GUI elements (views) =========================
-    public void doChangeMainCard(View paramView) {
+    public void doChangeCard(View paramView) {
         showTopMessage("change main card");
 
         Integer card_id = Common.pickCard(Integer.valueOf(MAX_CARDS));
@@ -108,10 +110,18 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
-    // 2131165185 = R.id.Layout1
-    // 2131165187 = R.id.Layout2
-    // 2131165188  =
+    // 2131165185 = R.id.layout1
+    // 2131165187 = R.id.layout2
+    // 2131165188  = R.id.card
 
+    // catch the back pressed to switch to main layout
+    public void onBackPressed() {
+        if (((LinearLayout)findViewById(R.id.layout2)).getVisibility() == View.VISIBLE) {
+            switchToLayout1();
+            return;
+        }
+        super.onBackPressed();
+    }
 
     @Override
     protected void onCreate(Bundle myBundle) {
@@ -121,12 +131,32 @@ public class MainActivity extends AppCompatActivity {
         this.cards = getResources().obtainTypedArray(R.array.cards);
         this.meanings = getResources().obtainTypedArray(R.array.meanings);
         this.currentMeaning = this.meanings.getString(0);
-        // this.vibrator = ((Vibrator)getSystemService("vibrator"));
+        this.vibrator = ((Vibrator)getSystemService(Context.VIBRATOR_SERVICE));
 
         switchToLayout1();
 
         topTextMessage = (TextView) findViewById(R.id.top_message);
         bottomTextMessage = (TextView) findViewById(R.id.docs);
+
+        // create listeners
+        // mainCard
+        findViewById(R.id.mainCard).setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View paramAnonymousView)
+            {
+                MainActivity.this.doChangeCard(paramAnonymousView);
+            }
+        });
+
+        findViewById(R.id.mainCard).setOnLongClickListener(new View.OnLongClickListener()
+        {
+            public boolean onLongClick(View paramAnonymousView)
+            {
+                //MainActivity.this.doShowMeaning(paramAnonymousView);
+                MainActivity.this.vibrator.vibrate(50L);
+                return false;
+            }
+        });
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
