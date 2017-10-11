@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cards">
+        <item>@drawable/card00</item>
+        <item>@drawable/card01</item>
+        <item>@drawable/card02</item>
+        <item>@drawable/card02</item>
+        <item>@drawable/card04</item>
+        <item>@drawable/card05</item>
+        <item>@drawable/card06</item>
+        <item>@drawable/card07</item>
+        <item>@drawable/card08</item>
+        <item>@drawable/card09</item>
+        <item>@drawable/card10</item>
+        <item>@drawable/card11</item>
+        <item>@drawable/card12</item>
+        <item>@drawable/card13</item>
+        <item>@drawable/card14</item>
+        <item>@drawable/card15</item>
+        <item>@drawable/card16</item>
+        <item>@drawable/card17</item>
+        <item>@drawable/card18</item>
+        <item>@drawable/card19</item>
+        <item>@drawable/card20</item>
+        <item>@drawable/card21</item>
+        <item>@drawable/card22</item>
+        <item>@drawable/card23</item>
+        <item>@drawable/card24</item>
+        <item>@drawable/card25</item>
+        <item>@drawable/card26</item>
+        <item>@drawable/card27</item>
+        <item>@drawable/card28</item>
+        <item>@drawable/card29</item>
+        <item>@drawable/card30</item>
+        <item>@drawable/card31</item>
+        <item>@drawable/card32</item>
+        <item>@drawable/card33</item>
+        <item>@drawable/card34</item>
+        <item>@drawable/card35</item>
+        <item>@drawable/card36</item>
+        <item>@drawable/card37</item>
+        <item>@drawable/card38</item>
+        <item>@drawable/card39</item>
+        <item>@drawable/card40</item>
+        <item>@drawable/card41</item>
+        <item>@drawable/card42</item>
+        <item>@drawable/card43</item>
+        <item>@drawable/card44</item>
+        <item>@drawable/card45</item>
+        <item>@drawable/card46</item>
+        <item>@drawable/card47</item>
+        <item>@drawable/card48</item>
+        <item>@drawable/card49</item>
+        <item>@drawable/card50</item>
+        <item>@drawable/card51</item>
+        <item>@drawable/card52</item>
+        <item>@drawable/card53</item>
+        <item>@drawable/card54</item>
+        <item>@drawable/card55</item>
+        <item>@drawable/card56</item>
+        <item>@drawable/card57</item>
+        <item>@drawable/card58</item>
+        <item>@drawable/card59</item>
+        <item>@drawable/card60</item>
+        <item>@drawable/card61</item>
+        <item>@drawable/card62</item>
+        <item>@drawable/card63</item>
+        <item>@drawable/card64</item>
+        <item>@drawable/card65</item>
+        <item>@drawable/card66</item>
+        <item>@drawable/card67</item>
+        <item>@drawable/card68</item>
+        <item>@drawable/card69</item>
+        <item>@drawable/card70</item>
+        <item>@drawable/card71</item>
+        <item>@drawable/card72</item>
+        <item>@drawable/card73</item>
+        <item>@drawable/card74</item>
+        <item>@drawable/card75</item>
+        <item>@drawable/card76</item>
+        <item>@drawable/card77</item>
+    </array>
+    <array name="hiddencards">
+        <item>@drawable/card_blank</item>
+        <item>@drawable/card_past</item>
+        <item>@drawable/card_present</item>
+        <item>@drawable/card_future</item>
+        <item>@drawable/card_ancestors</item>
+        <item>@drawable/card_time</item>
+        <item>@drawable/card_tribe</item>
+        <item>@drawable/card_place</item>
+        <item>@drawable/card_journey</item>
+        <item>@drawable/card_inspiration</item>
+        <item>@drawable/card_self</item>
+        <item>@drawable/info_circlespread</item>
+    </array>
+    <string-array name="meanings">
+        <item>"0 - De Zot
+
+Ontdekkingsreis:
+Onschuld, Vrijheid, Potentie, Vertrouwen, Openheid, Moed, Spel, Optimisme.
+
+(dom, naief, irrationeel, lichtgelovig)"</item>
+        <item>"1 - De Magier
+
+Realiseer je dromen:
+Creativiteit, Inspiratie, Richting, Wilskracht, Levenskracht, Stroom, Eerste Stap, Bekrachtiging.
+
+(geblokkeerde stroom gebrek, aan wilskracht, twijfel over doel, machtsmisbruik)"</item>
+        <item>"2 - De Hogepriesteres
+
+De stilte betreden:
+Diepte, Intuitie, Dromen, Innerlijke Wijsheid, Poort naar Initiatie, Onbewuste, Goddelijke Vrouwelijke.
+
+(illusie, hersenschimmen, bedrog, veronachtzamen van innerlijke aanwijzingen)"</item>
+        <item>"3 - De Vrouwe
+
+Liefde, Vertrouwen en Overvloed:
+Vruchtbaarheid, Overvloed, Passie, Creativiteit, Sensualiteit, Verzorging, Moederschap, Schoonheid, Geluk, Heling.
+
+(onderdrukte gevoelens, rationeel, gebrek, creatieve blokkade, armoede, onvruchtbaarheid))"</item>
+        <item>"4 - De Heer
+
+Structuur die nodig is voor succes:
+mannelijke kracht, vaderschap, structuur, autoriteit, leiderschap, bescherming, grenzen, totstandkoming, orde. 
+(verlies van gezag, gebrek aan helderheid, krachtmeting, besluiteloosheid, dictatoriaal, zwak, gebrek aan zelfwaardering)"</item>
+        <item>"5 - De Hogepriester
+
+Traditie en Raad:
+traditie, educatie, religieuze doctrines, zoeken naar zingeving, routine, in overeenstemming brengen, advisering, initiatie. 
+
+(rebellie, zonderlingheid, afwijzing van normen en waarden, slecht advies)"</item>
+        <item>"6 - De Geliefden
+
+Liefde vereist overgave, overgave vereist keuze:
+liefde, vervulling, vereniging, keuze, overgave. 
+
+(jaloezie, besluiteloosheid, kapotmakende liefde, romantische moeilijkheden, scheiding)"</item>
+        <item>"7 - De Zegewagen
+
+Succesvol het leven aangaan:
+zege, succes, meesterschap, controle, wilskracht, het ontwikkelde ego, obstakels overwinnen, roem, reizen.
+
+(zwakte, misbruik van wilskracht, verlies van controle, uitstel, mislukking, onverdiend succes)"</item>
+        <item>"8 - Kracht
+
+Ontmoeting van het Wilde en gecultiveerde zelf:
+onvoorwaardelijke liefde, moed, geloof, bewuste kracht, wilde wijsheid, mededogen.
+
+(angst, verlies van hoop, gebrek aan moed, zelfkwelling, niet in staat om passie te integreren)"</item>
+        <item>"9 - De Heremiet
+
+Een innerlijke drang: raad, retraite, bedachtzaamheid, onttrekking, meditatie.
+
+(eenzaamheid, isolatie, angst voor ouderdom, machtsmisbruik, onvoorzichtigheid"</item>
+        <item>"10 - Het Wiel
+
+Vertrouwen in de loop van het leven:
+Beloning oogsten, synchroniciteit, oogst, voorspoed, vooruitgang, voltooing/begin van een cyclus, onvermijdelijkheid.
+
+(verzet tegen verandering, moeilijke tijd, versterken van de wil, laten gaan)"</item>
+        <item>"11 - Gerechtigheid
+
+Tijd om een besluit te nemen:
+ Onderscheidingsvermogen, balans, in evenwicht brengen, keuze, besluit, oordeel, helderheid, eerlijkheid, actie vanuit begrip.
+
+(onbalans, onbillijkheid, onrechtvaardigheid, oneerlijkheid)"</item>
+        <item>"12 - De Gehangene
+
+Vrede, begrip, geduld: 
+Omkering van waarden en standpunten, geduld, overgave of opoffering, verdieping van ervaringen, vrede, onafhankelijkheid.
+
+(niet tot overgave in staat zijn, delen van zelf ontkennen, gebrek aan zelfbewustzijn of intuitie, slachtofferrol)."</item>
+        <item>"13 - De Dood
+
+Initiatie en transformatie:
+Opruimen van het oude, ruimte maken voor het nieuwe, voorloper van de transformatie, intense passie, initiatie.
+
+(vermijden van verandering, angst voor verandering, verveling, stagnatie, pessimisme, depressiviteit)."</item>
+        <item>"14 - Fferyllt
+
+Harmonie en succesvolle creatieve ondernemingen:
+Welsprekendheid tussen werelden, creativiteit, harmonie, vrede, alchemie, magie. 
+
+(uitersten najagen, woestheid, onbalans, versnippering, ruzie)."</item>
+        <item>"15 - Cernunnos
+
+Laat veranTweeordelijkheid ontwaken:
+Potentie voor overvloed en bevrijding, beheersen van levenskracht, ontwaken van veranTweeordelijkheid, obsessie, materialisme.
+
+(machtsmisbruik, bezwijken voor verleidingen, spiritueel blind, losgeslagen)"</item>
+        <item>"16 - De Toren
+
+Verandering en inspiratie:
+plotselinge verlichting, onthulling, vernietiging gevolgd door schepping, plotseling vrijmaken van spanning, bevrijding en ontwaken.
+
+(loslaten tegenhouden, vermijden, gevangenschap)."</item>
+        <item>"17 - De Ster
+Vertrouwen en rust:
+Intuitie, hoop, optimisme, heling, openheid, rust, goede vooruitzichten.
+
+(lage zelfwaardering, onschuld verloren, niet meer in contact met je intuitie, verkwisting)."</item>
+        <item>"18 - De Maan
+
+Verandering, verbeelding, creativiteit:
+Paranormaal ontwaken, dromen, verbeelding, diepe openbaring van vrouwelijke mysterien, onttrekken, angst in de ogen zien.
+
+(verwarring, fantasie, depressie, verdovende middelen, verborgen moeilijkheden)"</item>
+        <item>"19 - De Zon
+
+Een creatieve en vreugdevolle fase:
+Geluk, tevredenheid, energie, verwondering, helderheid, optimisme, vreugde, vrijheid, vruchtbaarheid, creatieve expressie.
+
+(gebrek aan helderheid, ijderlheid, arrogantie, falen, teleurstelling)."</item>
+        <item>"20 - Hergeboorte
+
+De kracht van de roeping:
+Een roeping volgen, nieuwe richtingen, verniewing, transformatie, besluitvorming.
+
+(ontkenning van je innerlijke roeping, stagnatie, ontwaken, angst voor verandering)"</item>
+        <item>"21 - De Wereld
+
+De danser kent volledigheid:
+Voltooing, succes, overvloed, prestatie, extase, vereniging van het innerlijke en uiterlijke leven.
+
+(stilstand, vertraging, beperking)"</item>
+        <item>"Aas van Staven
+
+conceptie, geboorte, initiatief, creatieve energie"</item>
+        <item>"Twee van Staven
+
+creatieve spanning, doorgang, ontdekking"</item>
+        <item>"Drie van Staven
+
+onderneming, vertrouwen, doelen realiseren"</item>
+        <item>"Vier van Staven
+
+huis en haard, oogst, vieren"</item>
+        <item>"Vijf van Staven
+
+creatief conflict, speelse strijd, competitie"</item>
+        <item>"Zes van Staven
+
+overwinning, succes, roem, leiderschap"</item>
+        <item>"Zeven van Staven
+
+strijd, uitdaging, obstakels overwinnen"</item>
+        <item>"Acht van Staven
+
+snelheid, synchroniciteit, realisatie"</item>
+        <item>"Negen van Staven
+
+ultieme uitdaging, voorzichtigheid"</item>
+        <item>"Tien van Staven
+
+verplichtingen, last, overwerk"</item>
+        <item>"Prinses van Staven
+
+enthousiasme, energiek, inventief"</item>
+        <item>"Prins van Staven
+
+hartstochtelijk, vurig, opstandig"</item>
+        <item>"Koningin van Staven
+
+dynamisch, zelfverzekerd, sterke wil"</item>
+        <item>"Koning van Staven
+
+resoluut, onderzoekend, optimistisch"</item>
+        <item>"Aas van Bokalen
+
+liefde, inspiratie, vruchtbare dromen, zegeningen"</item>
+        <item>"Twee van Bokalen
+
+liefde, genezing, romantische ontmoeting, verzoening"</item>
+        <item>"Drie van Bokalen
+
+viering, vriendschap, gaven"</item>
+        <item>"Vier van Bokalen
+
+saaie periode, stagnatie, beperking"</item>
+        <item>"Vijf van Bokalen
+
+gevoel van verlies, gemiste kansen, erfenis"</item>
+        <item>"Zes van Bokalen
+
+gecombineerd geheugen, reunie, uitwisseling"</item>
+        <item>"Zeven van Bokalen
+
+verleiding, illusie, zoektocht naar de graal"</item>
+        <item>"Acht van Bokalen
+
+laten gaan, je hogere bestemming zoeken, doorgaan"</item>
+        <item>"Negen van Bokalen
+
+tevredenheid, prestatie, realiseren van dromen"</item>
+        <item>"Tien van Bokalen
+
+geluk, liefde, vervulling"</item>
+        <item>"Prinses van Bokalen
+
+gevoelig, life, dromerig"</item>
+        <item>"Prins van Bokalen
+
+idealistisch, invoelend, romantisch"</item>
+        <item>"Koningin van Bokalen
+
+liefdevol, moederlijk, intuitief"</item>
+        <item>"Koning van Bokalen
+
+tolerant, eerlijk, mededogend"</item>
+        <item>"Aas van Zwaarden
+
+helderheid, succes, reinigende verandering"</item>
+        <item>"Twee van Zwaarden
+
+dilemma, tegenstand, besluiteloos"</item>
+        <item>"Drie van Zwaarden
+
+liefdesverdriet, potentiele transformatie, wijsheid uit lijden"</item>
+        <item>"Vier van Zwaarden
+
+in retraite gaan, rust, troost"</item>
+        <item>"Vijf van Zwaarden
+
+nederlaag, schande, falende communicatie, jaloezie"</item>
+        <item>"Zes van Zwaarden
+
+reizen, troosten, genezing"</item>
+        <item>"Zeven van Zwaarden
+
+inzicht, strategie, onderzoek"</item>
+        <item>"Acht van Zwaarden
+
+beperking, potentie tot bevrijding"</item>
+        <item>"Negen van Zwaarden
+
+spijt, doodsangst, mentale wreedheid"</item>
+        <item>"Tien van Zwaarden
+
+dieptepunt, verraad, onverdiende haat"</item>
+        <item>"Prinses van Zwaarden
+
+onderzoekend, objectief, gereserveerd"</item>
+        <item>"Prins van Zwaarden
+
+intelligent, welbespraakt, impulsief"</item>
+        <item>"Koningin van Zwaarden
+
+onafhankelijk, gracieus, analytisch"</item>
+        <item>"Koning van Zwaarden
+
+intellectueel, besluitvaardig, onderscheidend"</item>
+        <item>"Aas van Pentagrammen
+
+financeel gewin, materiele vooruitgang, diepgaande gerustheid"</item>
+        <item>"Twee van Pentagrammen
+
+balans, vertrouwen, speels"</item>
+        <item>"Drie van Pentagrammen
+
+toename, kunstvaardigheid, bekwaamheid, waardering."</item>
+        <item>"Vier van Pentagrammen
+
+rijkdom opbouwen, geaard, zekerheid"</item>
+        <item>"Vijf van Pentagrammen
+
+verlies, ontbinding"</item>
+        <item>"Zes van Pentagrammen
+
+vrijgevigheid, begunstiging, gaven"</item>
+        <item>"Zeven van Pentagrammen
+
+vrucht dragen, oogsten, ruimte maken"</item>
+        <item>"Acht van Pentagrammen
+
+bestendige vooruitgang, scholing, stage"</item>
+        <item>"Negen van Pentagrammen
+
+winst, plezier, leef je ideaal"</item>
+        <item>"Tien van Pentagrammen
+
+zegeningen, voorspoed, erfenis"</item>
+        <item>"Prinses van Pentagrammen
+
+leergierig, zelfvertrouwen, goedaardig"</item>
+        <item>"Prins van Pentagrammen
+
+praktisch, realistisch, zintuigelijk"</item>
+        <item>"Koningin van Pentagrammen
+
+royaal, geduldig, praktisch"</item>
+        <item>"Koning van Pentagrammen
+
+verantwoordelijkheid, standvastig, productief"</item>
+    </string-array>
+</resources>

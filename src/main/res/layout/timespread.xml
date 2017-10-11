@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/timespreadView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip" android:text="@string/timespreadTitle" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="330.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="150.0dip" android:layout_weight="0.0"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:id="@id/positionPast" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:src="@drawable/card_past" android:onClick="doShowPast" />
+                <ImageView android:id="@id/positionPresent" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:src="@drawable/card_present" android:onClick="doShowPresent" />
+                <ImageView android:id="@id/positionFuture" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:src="@drawable/card_future" android:onClick="doShowFuture" />
+            </LinearLayout>
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.01"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:gravity="center|top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/past" android:layout_weight="0.1" />
+                    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/present" android:layout_weight="0.1" />
+                    <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/future" android:layout_weight="0.1" />
+                </LinearLayout>
+                <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="6.86"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:gravity="center|top" android:id="@id/textMeaning" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/meaning" android:layout_weight="0.1" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.09"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/newSpread" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newSpread" android:onClick="doNewSpread" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:gravity="center" android:id="@id/card" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="doPreviousLayout"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+</LinearLayout>

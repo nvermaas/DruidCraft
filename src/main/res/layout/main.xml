@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/mainView" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip" android:text="@string/welcome" />
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <Button android:id="@id/buttonSingleCard" android:layout_width="145.0dip" android:layout_height="wrap_content" android:text="@string/singlecard" android:onClick="doSingleCard" />
+                    <Button android:id="@id/timespread" android:layout_width="145.0dip" android:layout_height="wrap_content" android:text="@string/timespread" android:onClick="doTimeSpread" />
+                    <Button android:id="@id/buttonCircleSpread" android:layout_width="145.0dip" android:layout_height="wrap_content" android:text="@string/circlespread" android:onClick="doCircleSpread" />
+                    <Button android:id="@id/cardgrid" android:layout_width="145.0dip" android:layout_height="wrap_content" android:text="@string/cardgrid" android:onClick="doCardGrid" />
+                    <Button android:id="@id/gallery" android:layout_width="145.0dip" android:layout_height="wrap_content" android:text="@string/gallery" android:onClick="doGallery" /> />
+</LinearLayout>
+                <LinearLayout android:gravity="center|top" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <ImageView android:gravity="top" android:id="@id/mainCard" android:longClickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/card00" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip" android:text="@string/docs" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:gravity="center" android:id="@id/card" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="doPreviousLayout"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+</LinearLayout>

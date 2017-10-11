@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="gridlayout">false</item>
+    <item type="id" name="layout1">false</item>
+    <item type="id" name="cardGrid">false</item>
+    <item type="id" name="layout2">false</item>
+    <item type="id" name="card">false</item>
+    <item type="id" name="circlespreadView">false</item>
+    <item type="id" name="positionAncestors">false</item>
+    <item type="id" name="positionPlace">false</item>
+    <item type="id" name="newSpread">false</item>
+    <item type="id" name="positionInspiration">false</item>
+    <item type="id" name="positionSelf">false</item>
+    <item type="id" name="positionJourney">false</item>
+    <item type="id" name="positionTime">false</item>
+    <item type="id" name="positionTribe">false</item>
+    <item type="id" name="info">false</item>
+    <item type="id" name="gallerylayout">false</item>
+    <item type="id" name="myGallery">false</item>
+    <item type="id" name="mainView">false</item>
+    <item type="id" name="buttonSingleCard">false</item>
+    <item type="id" name="timespread">false</item>
+    <item type="id" name="buttonCircleSpread">false</item>
+    <item type="id" name="cardgrid">false</item>
+    <item type="id" name="gallery">false</item>
+    <item type="id" name="mainCard">false</item>
+    <item type="id" name="timespreadView">false</item>
+    <item type="id" name="positionPast">false</item>
+    <item type="id" name="positionPresent">false</item>
+    <item type="id" name="positionFuture">false</item>
+    <item type="id" name="textMeaning">false</item>
+    <item type="id" name="about">false</item>
+</resources>

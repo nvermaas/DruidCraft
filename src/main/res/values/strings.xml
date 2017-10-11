@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="app_name">DruidCraft Tarot</string>
+    <string name="welcome"><b>Choose a Spread</b></string>
+    <string name="exit">Exit</string>
+    <string name="circlespread">Spirit of the Circle</string>
+    <string name="circlespreadTitle"><b>Spirits of the Circle</b></string>
+    <string name="timespread">Spirits of Time</string>
+    <string name="timespreadTitle"><b>Spirits of Time</b></string>
+    <string name="past">Past</string>
+    <string name="present">Present</string>
+    <string name="future">Future</string>
+    <string name="pastpresentfuture">Past - - - - - Present - - - - - Future</string>
+    <string name="singlecard">Single Card</string>
+    <string name="cardgrid">Card Grid</string>
+    <string name="gallery">Card Gallery</string>
+    <string name="cardview">Card</string>
+    <string name="newSpread">New Spread</string>
+    <string name="info">Info</string>
+    <string name="mainScreen">Main Screen</string>
+    <string name="meaning">meaning</string>
+    <string name="docs">"*click* to turn a card or zoom in.
+ *longclick* for meaning
+"</string>
+    <string name="about">"DruidCraft Tarot App
+(17 march 2012)
+
+By Nico Vermaas
+explorer@xs4all.nl
+
+ *click* to turn a card or zoom.
+ *longclick* for meaning"</string>
+</resources>

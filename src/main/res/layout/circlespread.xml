@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/circlespreadView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="110.0dip" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:id="@id/positionAncestors" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="90.0dip" android:src="@drawable/card_ancestors" android:onClick="doShowAncestors" />
+                <ImageView android:id="@id/positionPlace" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/card_place" android:onClick="doShowPlace" />
+                <Button android:id="@id/newSpread" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="30.0dip" android:text="@string/newSpread" android:onClick="doNewSpread" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="110.0dip" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:id="@id/positionInspiration" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/card_inspiration" android:onClick="doShowInspiration" />
+                <ImageView android:id="@id/positionSelf" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/card_self" android:onClick="doShowSelf" />
+                <ImageView android:id="@id/positionJourney" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/card_journey" android:onClick="doShowJourney" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="110.0dip" android:layout_height="fill_parent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:id="@id/positionTime" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="90.0dip" android:src="@drawable/card_time" android:onClick="doShowTime" />
+                <ImageView android:id="@id/positionTribe" android:longClickable="true" android:layout_width="109.0dip" android:layout_height="148.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/card_tribe" android:onClick="doShowTribe" />
+                <Button android:id="@id/info" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="30.0dip" android:text="@string/info" android:onClick="doInfo" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="0.09"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/newSpread" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/newSpread" android:onClick="doNewSpread" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout2" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:gravity="center" android:id="@id/card" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="doPreviousLayout"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+</RelativeLayout>
