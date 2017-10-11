@@ -46,12 +46,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle myBundle) {
         super.onCreate(myBundle);
         setContentView(R.layout.activity_main);
+        //setContentView(R.layout.ff);
         this.cards = getResources().obtainTypedArray(R.array.cards);
         this.meanings = getResources().obtainTypedArray(R.array.meanings);
         this.currentMeaning = this.meanings.getString(0);
         // this.vibrator = ((Vibrator)getSystemService("vibrator"));
-        //setContentView(R.layout.main);
-        mTextMessage = (TextView) findViewById(R.id.message);
+
+        mTextMessage = (TextView) findViewById(R.id.about);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
