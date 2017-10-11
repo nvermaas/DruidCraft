@@ -8,7 +8,7 @@ public class CardViewActivity
 {
   public void onCreate(Bundle myBundle) {
     super.onCreate(myBundle);
-    setContentView(R.layout.cardgrid);
+    setContentView(R.layout.cardview);
   }
 }
 

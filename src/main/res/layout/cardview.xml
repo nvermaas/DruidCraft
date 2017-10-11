@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageView android:gravity="center" android:id="@id/card" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="doPreviousLayout"
+<ImageView
+    android:gravity="center"
+    android:id="@id/card"
+    android:longClickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:onClick="doPreviousLayout"
   xmlns:android="http://schemas.android.com/apk/res/android" />
