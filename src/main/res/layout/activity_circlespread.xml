@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@id/circlespreadView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <android.support.constraint.ConstraintLayout android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <ImageView
+            android:id="@id/positionAncestors"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:longClickable="true"
+            android:onClick="doShowAncestors"
+            android:src="@drawable/card_ancestors"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <ImageView
+            android:id="@id/positionPlace"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:longClickable="true"
+            android:onClick="doShowPlace"
+            android:src="@drawable/card_place"
+            tools:layout_editor_absoluteY="269dp"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+        <ImageView
+            android:id="@id/positionInspiration"
+            android:longClickable="true"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:src="@drawable/card_inspiration"
+            android:onClick="doShowInspiration"
+            tools:layout_conversion_absoluteX="137dp"
+            tools:layout_conversion_absoluteY="56dp"
+            tools:layout_conversion_absoluteWidth="109dp"
+            tools:layout_conversion_absoluteHeight="148dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="138dp" />
+
+        <ImageView
+            android:id="@id/positionSelf"
+            android:longClickable="true"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:src="@drawable/card_self"
+            android:onClick="doShowSelf"
+            tools:layout_conversion_absoluteX="137dp"
+            tools:layout_conversion_absoluteY="214dp"
+            tools:layout_conversion_absoluteWidth="109dp"
+            tools:layout_conversion_absoluteHeight="148dp"
+            tools:layout_editor_absoluteY="171dp"
+            tools:layout_editor_absoluteX="138dp" />
+
+        <ImageView
+            android:id="@id/positionJourney"
+            android:longClickable="true"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:src="@drawable/card_journey"
+            android:onClick="doShowJourney"
+            tools:layout_conversion_absoluteX="137dp"
+            tools:layout_conversion_absoluteY="372dp"
+            tools:layout_conversion_absoluteWidth="109dp"
+            tools:layout_conversion_absoluteHeight="148dp"
+            tools:layout_editor_absoluteY="329dp"
+            tools:layout_editor_absoluteX="138dp" />
+
+
+        <ImageView
+            android:id="@id/positionTime"
+            android:longClickable="true"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:src="@drawable/card_time"
+            android:onClick="doShowTime"
+            tools:layout_conversion_absoluteX="247dp"
+            tools:layout_conversion_absoluteY="146dp"
+            tools:layout_conversion_absoluteWidth="109dp"
+            tools:layout_conversion_absoluteHeight="148dp"
+            tools:layout_editor_absoluteY="101dp"
+            tools:layout_editor_absoluteX="259dp" />
+
+        <ImageView
+            android:id="@id/positionTribe"
+            android:longClickable="true"
+            android:layout_width="109dp"
+            android:layout_height="148dp"
+            android:src="@drawable/card_tribe"
+            android:onClick="doShowTribe"
+            tools:layout_conversion_absoluteX="247dp"
+            tools:layout_conversion_absoluteY="304dp"
+            tools:layout_conversion_absoluteWidth="109dp"
+            tools:layout_conversion_absoluteHeight="148dp"
+            tools:layout_editor_absoluteY="269dp"
+            tools:layout_editor_absoluteX="259dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:baselineAligned="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@id/card"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:longClickable="true"
+            android:onClick="doPreviousLayout"
+            android:visibility="invisible" />
+    </LinearLayout>
+</RelativeLayout>

@@ -208,8 +208,8 @@ public class CircleSpreadActivity
 
   protected void onCreate(Bundle myBundle) {
     super.onCreate(myBundle);
-    setContentView(R.layout.circlespread);
-
+    //setContentView(R.layout.circlespread);
+    setContentView(R.layout.circlespread2);
     this.cards = getResources().obtainTypedArray(R.array.cards);
     this.hiddencards = getResources().obtainTypedArray(R.array.hiddencards);
     this.meanings = getResources().obtainTypedArray(R.array.meanings);
