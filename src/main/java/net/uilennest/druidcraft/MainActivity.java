@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                     //showTopMessage("Spread");
                     return true;
                 case R.id.navigation_time:
-                    doCircleSpread(null);
+                    doTimeSpread(null);
                     //showTopMessage("Notify");
                     return true;
             }
@@ -140,6 +140,10 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 //=== Interface to the other Activities ========================
+    public void doTimeSpread(View view)
+    {
+        startActivity(new Intent(this, TimeSpreadActivity.class));
+    }
     public void doCircleSpread(View view)
     {
         startActivity(new Intent(this, CircleSpreadActivity.class));

@@ -146,32 +146,32 @@ public class CircleSpreadActivity
     ((ImageView) findViewById(R.id.card)).setImageDrawable(card);
   }
 
-  public void doShowInspiration(View paramView) {
-    this.inspirationHidden = showCardOnPosition(5, R.id.positionInspiration, this.inspirationHidden);
-  }
-
-  public void doShowJourney(View paramView) {
-    this.journeyHidden = showCardOnPosition(4, R.id.positionJourney, this.journeyHidden);
-  }
-
   public void doShowMeaning(View view) {
     Common.showDialog(CircleSpreadActivity.this, this.currentMeaning);
   }
 
+  public void doShowInspiration(View paramView) {
+    this.inspirationHidden = showCardOnPosition(inspiration, R.id.positionInspiration, this.inspirationHidden);
+  }
+
+  public void doShowJourney(View paramView) {
+    this.journeyHidden = showCardOnPosition(journey, R.id.positionJourney, this.journeyHidden);
+  }
+
   public void doShowPlace(View paramView) {
-    this.placeHidden = showCardOnPosition(3, R.id.positionPlace, this.placeHidden);
+    this.placeHidden = showCardOnPosition(place, R.id.positionPlace, this.placeHidden);
   }
 
   public void doShowSelf(View paramView) {
-    this.selfHidden = showCardOnPosition(6, R.id.positionSelf, this.selfHidden);
+    this.selfHidden = showCardOnPosition(self, R.id.positionSelf, this.selfHidden);
   }
 
   public void doShowTime(View paramView) {
-    this.timeHidden = showCardOnPosition(1, R.id.positionTime, this.timeHidden);
+    this.timeHidden = showCardOnPosition(time, R.id.positionTime, this.timeHidden);
   }
 
   public void doShowTribe(View paramView) {
-    this.tribeHidden = showCardOnPosition(2, R.id.positionTribe, this.tribeHidden);
+    this.tribeHidden = showCardOnPosition(tribe, R.id.positionTribe, this.tribeHidden);
   }
 
   private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -188,9 +188,7 @@ public class CircleSpreadActivity
           doNewSpread();
 
           return true;
-        case R.id.navigation_notifications:
-          doInfo();
-          return true;
+
       }
       return false;
 
@@ -209,7 +207,7 @@ public class CircleSpreadActivity
   protected void onCreate(Bundle myBundle) {
     super.onCreate(myBundle);
     //setContentView(R.layout.circlespread);
-    setContentView(R.layout.circlespread2);
+    setContentView(R.layout.circlespread);
     this.cards = getResources().obtainTypedArray(R.array.cards);
     this.hiddencards = getResources().obtainTypedArray(R.array.hiddencards);
     this.meanings = getResources().obtainTypedArray(R.array.meanings);

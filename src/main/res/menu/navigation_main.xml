@@ -7,13 +7,13 @@
         android:title="Single Card" />
 
     <item
+        android:id="@+id/navigation_time"
+        android:icon="@drawable/ic_view_week_black_24dp"
+        android:title="Time Spread" />
+    <item
         android:id="@+id/navigation_spread"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Circle Spread" />
 
-    <item
-        android:id="@+id/navigation_time"
-        android:icon="@drawable/ic_view_week_black_24dp"
-        android:title="Time Spread" />
 
 </menu>
