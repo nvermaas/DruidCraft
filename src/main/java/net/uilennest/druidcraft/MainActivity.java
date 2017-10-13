@@ -17,8 +17,6 @@ import android.widget.TextView;
 import android.content.Context;
 
 public class MainActivity extends AppCompatActivity {
-    static final int DIALOG_ABOUT = 1;
-    static final int DIALOG_MEANING = 0;
     static final int MAX_CARDS = 78;
     static final int MAX_CARDS_GREAT_ARCANA = 22;
     private TypedArray hiddencards;
@@ -58,12 +56,10 @@ public class MainActivity extends AppCompatActivity {
     public void doChangeCard(View view) {
         Integer card_id = Common.pickCard(Integer.valueOf(MAX_CARDS));
         Drawable card = this.cards.getDrawable(card_id);
-
         String meaning = this.meanings.getString(card_id);
-
         this.currentMeaning = meaning;
+
         ((ImageView)findViewById(R.id.mainCard)).setImageDrawable(card);
-        //showTopMessage(meaning);
     }
 
     public void doSingleCard(View view) {
@@ -97,19 +93,12 @@ public class MainActivity extends AppCompatActivity {
         Common.doShowMeaning(MainActivity.this,this.currentMeaning);
     }
 
-    public void doCardGrid() {
-        Common.showDialog(MainActivity.this,"CardGrid","this will show all cards... later");
-    }
-    public void doCardGrid(View view) {
-        Common.showDialog(MainActivity.this,"CardGrid","this will show all cards... later");
-    }
 
     public void doAbout(String message) {
         Common.showDialog(MainActivity.this,"About",message);
-
     }
-    public void startCardViewActivity()
-    {
+
+    public void startCardViewActivity() {
         startActivity(new Intent(this, CardViewActivity.class));
     }
 
@@ -123,18 +112,13 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_single:
-                    //showTopMessage("Home");
-                    // showSingleCard
                     doSingleCard(null);
-
                     return true;
                 case R.id.navigation_spread:
                     doCircleSpread(null);
-                    //showTopMessage("Spread");
                     return true;
                 case R.id.navigation_time:
                     doTimeSpread(null);
-                    //showTopMessage("Notify");
                     return true;
                 case R.id.navigation_cards:
                     doCardGallery(null);
@@ -142,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_about:
                     doAbout("DruidCraft Tarot App - version 13 oct 2017\nAndroid App by Nico Vermaas (nvermaas@xs4all.nl), " +
                             "based on DruidCraft Tarot by Philip & Stephanie Carr-Gomm\n ");
-                    //showTopMessage("Notify");
                     return true;
             }
             return false;
