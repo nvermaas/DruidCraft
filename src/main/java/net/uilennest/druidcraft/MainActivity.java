@@ -32,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private void showTopMessage(String message) {
         topTextMessage.setText(message);
     }
-    private void showBottomMessage(String message) {
-        bottomTextMessage.setText(message);
+    private void showBottomMessage(String message) { bottomTextMessage.setText(message);
     }
     private void doPreviousLayout() {
         switchToLayout1();
@@ -91,11 +90,24 @@ public class MainActivity extends AppCompatActivity {
         ((ImageView)findViewById(R.id.card)).setImageDrawable(card);
     }
 
-    public void doShowMeaning(View view) {
-        Common.showDialog(MainActivity.this,this.currentMeaning);
-        //showTopMessage(this.currentMeaning);
+    private void doShowMeaning() {
+        int pos = this.currentMeaning.indexOf("\n");
+        String title = this.currentMeaning.substring(0,pos).trim();
+        String description = this.currentMeaning.substring(pos).trim();
+        Common.doShowMeaning(MainActivity.this,this.currentMeaning);
     }
 
+    public void doCardGrid() {
+        Common.showDialog(MainActivity.this,"CardGrid","this will show all cards... later");
+    }
+    public void doCardGrid(View view) {
+        Common.showDialog(MainActivity.this,"CardGrid","this will show all cards... later");
+    }
+
+    public void doAbout(String message) {
+        Common.showDialog(MainActivity.this,"About",message);
+
+    }
     public void startCardViewActivity()
     {
         startActivity(new Intent(this, CardViewActivity.class));
@@ -124,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
                     doTimeSpread(null);
                     //showTopMessage("Notify");
                     return true;
+                case R.id.navigation_cards:
+                    doCardGallery(null);
+                    return true;
+                case R.id.navigation_about:
+                    doAbout("DruidCraft Tarot App - version 13 oct 2017\nAndroid App by Nico Vermaas (nvermaas@xs4all.nl), " +
+                            "based on DruidCraft Tarot by Philip & Stephanie Carr-Gomm\n ");
+                    //showTopMessage("Notify");
+                    return true;
             }
             return false;
 
@@ -148,6 +168,10 @@ public class MainActivity extends AppCompatActivity {
     {
         startActivity(new Intent(this, CircleSpreadActivity.class));
     }
+    public void doCardGallery(View view)
+    {
+        startActivity(new Intent(this, CardGalleryActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle myBundle) {
@@ -157,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
         this.cards = getResources().obtainTypedArray(R.array.cards);
         this.hiddencards = getResources().obtainTypedArray(R.array.hiddencards);
         this.meanings = getResources().obtainTypedArray(R.array.meanings);
+
         this.currentMeaning = this.meanings.getString(0);
         this.vibrator = ((Vibrator)getSystemService(Context.VIBRATOR_SERVICE));
 
@@ -179,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         {
             public boolean onLongClick(View view)
             {
-                doShowMeaning(view);
+                doShowMeaning();
                 return false;
             }
         });
@@ -197,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
         {
             public boolean onLongClick(View view)
             {
-                doShowMeaning(view);
+                doShowMeaning();
                 //vibrator.vibrate(50L);
                 return false;
             }

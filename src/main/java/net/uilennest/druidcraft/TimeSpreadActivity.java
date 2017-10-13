@@ -122,8 +122,15 @@ public class TimeSpreadActivity
     ((TextView)findViewById(R.id.textMeaning)).setText(message);
   }
 
-  public void doShowMeaning(View view) {
-    Common.showDialog(TimeSpreadActivity.this, this.currentMeaning);
+  private void doShowMeaning() {
+    int pos = this.currentMeaning.indexOf("\n");
+    String title = this.currentMeaning.substring(0,pos).trim();
+    String description = this.currentMeaning.substring(pos).trim();
+    Common.doShowMeaning(TimeSpreadActivity.this,this.currentMeaning);
+  }
+
+  public void doShowMeaning_xxx(View view) {
+    Common.showDialog(TimeSpreadActivity.this,"Meaning", this.currentMeaning);
   }
 
   public void doShowPast(View paramView) {
@@ -186,7 +193,7 @@ public class TimeSpreadActivity
     findViewById(R.id.card).setOnLongClickListener(new OnLongClickListener() {
       public boolean onLongClick(View view) {
         //CircleSpreadActivity.this.vibrator.vibrate(50L);
-        doShowMeaning(view);
+        doShowMeaning();
         return false;
       }
     });
@@ -198,7 +205,7 @@ public class TimeSpreadActivity
     findViewById(R.id.positionPast).setOnLongClickListener(new OnLongClickListener() {
       public boolean onLongClick(View view) {
         if (!pastHidden) {
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }
@@ -211,7 +218,7 @@ public class TimeSpreadActivity
     findViewById(R.id.positionPresent).setOnLongClickListener(new OnLongClickListener() {
       public boolean onLongClick(View view) {
         if (!presentHidden) {
-         doShowMeaning(view);
+         doShowMeaning();
         }
         return false;
       }
@@ -224,7 +231,7 @@ public class TimeSpreadActivity
     findViewById(R.id.positionFuture).setOnLongClickListener(new OnLongClickListener() {
       public boolean onLongClick(View view) {
         if (!futureHidden) {
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }

@@ -132,6 +132,11 @@ public class CircleSpreadActivity
     hideSpread();
   }
 
+  public void doNewSpread(View view) {
+    this.picks = Common.pickCards(NR_PICKS, MAX_CARDS);
+    hideSpread();
+  }
+
   public void doPreviousLayout() {
     switchToLayout1();
     showCurrentSpread();
@@ -146,8 +151,15 @@ public class CircleSpreadActivity
     ((ImageView) findViewById(R.id.card)).setImageDrawable(card);
   }
 
-  public void doShowMeaning(View view) {
-    Common.showDialog(CircleSpreadActivity.this, this.currentMeaning);
+  public void doShowMeaning_xxx(View view) {
+    Common.showDialog(CircleSpreadActivity.this, "Meaning",this.currentMeaning);
+  }
+
+  private void doShowMeaning() {
+    int pos = this.currentMeaning.indexOf("\n");
+    String title = this.currentMeaning.substring(0,pos).trim();
+    String description = this.currentMeaning.substring(pos).trim();
+    Common.doShowMeaning(CircleSpreadActivity.this,this.currentMeaning);
   }
 
   public void doShowInspiration(View paramView) {
@@ -224,7 +236,7 @@ public class CircleSpreadActivity
     findViewById(R.id.card).setOnLongClickListener(new OnLongClickListener() {
       public boolean onLongClick(View view) {
         //CircleSpreadActivity.this.vibrator.vibrate(50L);
-        doShowMeaning(view);
+        doShowMeaning();
         return false;
       }
     });
@@ -237,7 +249,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!ancestorsHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }
@@ -251,7 +263,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!timeHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          CircleSpreadActivity.this.doShowMeaning(view);
+          CircleSpreadActivity.this.doShowMeaning();
         }
         return false;
       }
@@ -265,7 +277,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!tribeHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }
@@ -279,7 +291,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!placeHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }
@@ -293,7 +305,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!CircleSpreadActivity.this.journeyHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          CircleSpreadActivity.this.doShowMeaning(view);
+          CircleSpreadActivity.this.doShowMeaning();
         }
         return false;
       }
@@ -307,7 +319,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!inspirationHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }
@@ -321,7 +333,7 @@ public class CircleSpreadActivity
       public boolean onLongClick(View view) {
         if (!selfHidden) {
           //CircleSpreadActivity.this.vibrator.vibrate(50L);
-          doShowMeaning(view);
+          doShowMeaning();
         }
         return false;
       }

@@ -15,6 +15,16 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginTop="20.0dip"
+            android:gravity="center_horizontal"
+            android:text="Spirits of the Circle"
+            android:textAppearance="?android:textAppearanceLarge" />
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="600dp"
@@ -23,7 +33,7 @@
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="110.0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="495dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -53,13 +63,13 @@
                     android:layout_marginTop="30.0dip"
                     android:onClick="doNewSpread"
                     android:text="@string/newSpread"
-                    android:visibility="invisible" />
+                    android:visibility="visible" />
 
             </LinearLayout>
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="110.0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="503dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
@@ -93,7 +103,7 @@
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="110.0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="496dp"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 

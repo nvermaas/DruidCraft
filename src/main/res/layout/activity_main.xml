@@ -42,7 +42,8 @@
                     android:layout_height="fill_parent"
                     android:layout_weight="1.0"
                     android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <Button
                         android:id="@id/buttonSingleCard"
@@ -69,16 +70,11 @@
                         android:id="@id/cardgrid"
                         android:layout_width="145.0dip"
                         android:layout_height="wrap_content"
-                        android:onClick="doCardGrid"
-                        android:text="@string/cardgrid" />
+                        android:onClick="doCardGallery"
+                        android:text="All Cards" /><![CDATA[
 
-                    <Button
-                        android:id="@id/gallery"
-                        android:layout_width="145.0dip"
-                        android:layout_height="wrap_content"
-                        android:onClick="doGallery"
-                        android:text="@string/gallery" />
                     />
+                ]]>
                 </LinearLayout>
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -95,7 +91,7 @@
                         android:layout_weight="1.0"
                         android:gravity="top"
                         android:onClick="doChangeCard"
-                        android:src="@drawable/card00"
+                        android:src="@drawable/card03"
                         tools:longClickable="true" />
                 </LinearLayout>
             </LinearLayout>

@@ -14,6 +14,13 @@
         android:id="@+id/navigation_spread"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="Circle Spread" />
-
+    <item
+        android:id="@+id/navigation_cards"
+        android:icon="@drawable/ic_view_carousel_black_24dp"
+        android:title="All Cards" />
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="About" />
 
 </menu>

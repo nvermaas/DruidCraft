@@ -20,6 +20,7 @@
         <activity android:label="@string/cardview" android:name=".CardViewActivity"/>
         <activity android:label="@string/circlespread" android:name=".CircleSpreadActivity"/>
         <activity android:label="@string/timespread" android:name=".TimeSpreadActivity"/>
+        <activity android:label="Card Gallery" android:name=".CardGalleryActivity"/>
     </application>
 
 </manifest>
