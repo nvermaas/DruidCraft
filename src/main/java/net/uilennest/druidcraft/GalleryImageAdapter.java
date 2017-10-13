@@ -12,14 +12,19 @@ public class GalleryImageAdapter extends BaseAdapter
 {
   private Context mContext;
   public TypedArray mCards;
+  public TypedArray mMeanings;
+  public String currentMeaning;
 
-
-  public GalleryImageAdapter(Context context, TypedArray cards)
+  public GalleryImageAdapter(Context context, TypedArray cards, TypedArray meanings)
   {
     mContext = context;
     mCards = cards;
+    mMeanings = meanings;
   }
 
+  public String getCurrentMeaning() {
+      return this.currentMeaning;
+  }
   public int getCount() {
 
     //return mImageIds.length;

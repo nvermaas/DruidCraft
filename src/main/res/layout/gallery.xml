@@ -16,21 +16,23 @@
             android:stretchMode="columnWidth"
             android:verticalSpacing="10.0dip" />
 
+        <TextView
+            android:id="@+id/textMeaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginTop="20.0dip"
+            android:gravity="center_horizontal"
+            android:text="(meaning)" />
+
         <ImageView
             android:id="@+id/selectedImage"
-            android:layout_width="250dp"
+            android:layout_width="292dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="100dp"
             android:longClickable="true"
             android:src="@drawable/card03"
             android:visibility="visible" />
-    </LinearLayout>
-    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layout2" android:layout_width="fill_parent" android:layout_height="fill_parent"
-      xmlns:android="http://schemas.android.com/apk/res/android">
-        <ImageView android:gravity="center" android:id="@id/card"
-            android:longClickable="true" android:layout_width="fill_parent"
-            android:layout_height="fill_parent" android:onClick="doPreviousLayout"
-          xmlns:android="http://schemas.android.com/apk/res/android" />
     </LinearLayout>
 </LinearLayout>

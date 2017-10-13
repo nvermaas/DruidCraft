@@ -38,28 +38,12 @@ public class CardGalleryActivity
   private TypedArray hiddencards;
   private TypedArray meanings;
   private ImageView selectedImage;
+  private TextView selectedMeaning;
   private Integer[] theCards;
 
   private List<Integer> picks = new ArrayList();
 
   private Vibrator vibrator;
-
-  // main screen
-  private void switchToLayout1() {
-    LinearLayout layout1 = (LinearLayout) findViewById(R.id.layout1);
-    LinearLayout layout2 = (LinearLayout) findViewById(R.id.layout2);
-    layout1.setVisibility(View.VISIBLE);
-    layout2.setVisibility(View.GONE);
-  }
-
-  // card gui
-  private void switchToLayout2() {
-    LinearLayout layout1 = (LinearLayout) findViewById(R.id.layout1);
-    LinearLayout layout2 = (LinearLayout) findViewById(R.id.layout2);
-    layout1.setVisibility(View.GONE);
-    layout2.setVisibility(View.VISIBLE);
-  }
-
 
   public void doShowMeaningLabel(String message) {
     ((TextView)findViewById(R.id.textMeaning)).setText(message);
@@ -76,32 +60,26 @@ public class CardGalleryActivity
   {
     Gallery gallery = (Gallery)findViewById(R.id.myGallery);
     selectedImage=(ImageView)findViewById(R.id.selectedImage);
-    //selectedImage.setImageDrawable(this.cards.getDrawable(Integer.valueOf(0)));
-
+    selectedMeaning=(TextView)findViewById(R.id.textMeaning);
     int pos = 5;
     this.currentMeaning =this.meanings.getString(Integer.valueOf(pos));
 
     gallery.setSpacing(1);
-    final GalleryImageAdapter galleryImageAdapter= new GalleryImageAdapter(this, this.cards);
+    final GalleryImageAdapter galleryImageAdapter= new GalleryImageAdapter(this, this.cards, this.meanings);
     gallery.setAdapter(galleryImageAdapter);
 
      gallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
         // show the selected Image
+        String meaning = galleryImageAdapter.mMeanings.getString(Integer.valueOf(position));
+        selectedMeaning.setText(meaning);
         selectedImage.setImageDrawable(galleryImageAdapter.mCards.getDrawable(Integer.valueOf(position)));
 
       }
     });
   }
 
-  // catch the back pressed to switch to main layout
-  public void onBackPressed() {
-    if (((LinearLayout) findViewById(R.id.layout2)).getVisibility() == View.VISIBLE) {
-      switchToLayout1();
-      return;
-    }
-    super.onBackPressed();
-  }
+
 
   protected void onCreate(Bundle myBundle) {
     super.onCreate(myBundle);
@@ -112,25 +90,12 @@ public class CardGalleryActivity
     this.currentMeaning = this.meanings.getString(0);
     this.vibrator = ((Vibrator) getSystemService(Context.VIBRATOR_SERVICE));
 
-    switchToLayout1();
     showGallery();
 
-    findViewById(R.id.card).setOnClickListener(new View.OnClickListener() {
-      public void onClick(View view) {
-        switchToLayout2();
-      }
-    });
-    findViewById(R.id.card).setOnLongClickListener(new OnLongClickListener() {
-      public boolean onLongClick(View view) {
-        //CircleSpreadActivity.this.vibrator.vibrate(50L);
-        doShowMeaning();
-        return false;
-      }
-    });
+
     findViewById(R.id.selectedImage).setOnLongClickListener(new OnLongClickListener() {
       public boolean onLongClick(View view) {
         //CircleSpreadActivity.this.vibrator.vibrate(50L);
-
         doShowMeaning();
         return false;
       }
